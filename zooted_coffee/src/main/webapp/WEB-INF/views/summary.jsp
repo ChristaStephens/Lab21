@@ -20,10 +20,12 @@
 		Send them the
 		link below: <br>
 		<br> <a href="/userreg"> User Registration</a> <br>
-		<br> Thank your for being a customer at Zooted!
+		<br> Thank your for being a customer at Zooted! 
 	</p>
 	
 	<h2>
+	
+	<p> Powered by:</p>
 	<img src="http://www.zoot.cz/bundles/frontend/images/zoot-fb.png" alt="zoot image" style="width:50px;height:50px;">
 	
 	</h2>

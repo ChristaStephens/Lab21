@@ -22,12 +22,13 @@ public class ZootedController {
 	
 	@RequestMapping("/summary_page.php")
 	public ModelAndView showSummary( @RequestParam ("name") String name, 
-			@RequestParam("coffee") String coffee, @RequestParam("bday") String bday, @RequestParam("email") String email) {
+			@RequestParam("coffee") String coffee, @RequestParam("bday") String bday, @RequestParam("email") String email, @RequestParam ("updates") String updates) {
 		ModelAndView mv = new ModelAndView("summary");
 		mv.addObject("name", name);
 		mv.addObject("bday", bday);
 		mv.addObject("coffee", coffee);
 		mv.addObject("email", email);
+		mv.addObject("updates", updates);
 		
 		return mv;
 	}
