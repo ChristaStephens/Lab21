@@ -1,0 +1,19 @@
+@charset "ISO-8859-1";
+
+
+
+
+html {
+  background: url("https://i.pinimg.com/originals/3e/ca/32/3eca32a9d0391e0bb4014a70254577fd.png") no-repeat center fixed;
+  background-size: cover;
+}
+
+body {
+	font-family: Papyrus;
+	font-weight: bold;
+}
+
+h1 {
+  color: limegreen;
+  font-size: 32px;
+}

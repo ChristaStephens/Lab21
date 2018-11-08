@@ -3,8 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="style.css">
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+
+
+<title>Summary</title>
 </head>
 <body>
 <h1>Registration Summary </h1>

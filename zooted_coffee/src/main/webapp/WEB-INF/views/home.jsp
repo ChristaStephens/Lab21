@@ -4,6 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Be sure to add the style sheet link to connect with the css file -->
+
+<link rel="stylesheet" href="style.css">
 <meta charset="ISO-8859-1">
 <title>Zooted Coffee Shop</title>
 </head>
