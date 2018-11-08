@@ -17,7 +17,9 @@
 <p> Please fill out the form below for our yearly free birthday coffee:</p>
 
 <!-- action is where the page takes us, usually the final page -->
-<form action ="/summary">
+
+
+<form action="/summary_page.php" method="post">
 
 <p>Enter your name: <input name = "name" /> </p>
 

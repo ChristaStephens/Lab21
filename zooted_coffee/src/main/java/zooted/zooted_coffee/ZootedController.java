@@ -20,7 +20,7 @@ public class ZootedController {
 		return new ModelAndView("/userreg");
 	}
 	
-	@RequestMapping("/summary")
+	@RequestMapping("/summary_page.php")
 	public ModelAndView showSummary( @RequestParam ("name") String name, 
 			@RequestParam("coffee") String coffee, @RequestParam("bday") String bday, @RequestParam("email") String email) {
 		ModelAndView mv = new ModelAndView("summary");
