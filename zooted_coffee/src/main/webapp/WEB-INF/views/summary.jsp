@@ -12,14 +12,21 @@
 <body>
 	<h1>Registration Summary</h1>
 	<p>
-		Form completed ${ name } ! Your favorite drink from Zooted is ${ coffee }
+		Form completed ${ name } ! <br><br>
+		Your favorite drink from Zooted is ${ coffee }
 		<br> <br> Please watch your email ${email } for your
 		birthday coupon! <br>
-		<br> Have a friend sign up for a birthday drink! Send them the
+		<br> Have a friend sign up for a birthday drink!<br><br>
+		Send them the
 		link below: <br>
 		<br> <a href="/userreg"> User Registration</a> <br>
 		<br> Thank your for being a customer at Zooted!
 	</p>
+	
+	<h2>
+	<img src="http://www.zoot.cz/bundles/frontend/images/zoot-fb.png" alt="zoot image" style="width:50px;height:50px;">
+	
+	</h2>
 
 </body>
 </html>

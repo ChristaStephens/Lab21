@@ -21,9 +21,12 @@
 
 <form action="/summary_page.php" method="post">
 
-<p>Enter your name: <input name = "name" /> </p>
+<p>Enter your name: <br>
+<input name = "name" /> </p>
 
-<p>Enter your birthdate: <input type="date" name="bday" max="1939-12-31"/></p>
+<p>Enter your birthdate: <br>
+
+ <input type="date" name="bday" max="1939-12-31"/></p>
 
 <p>Favorite drink?
 <br>
@@ -34,7 +37,7 @@
 
   </p>
 
-<p>Enter your email to receive a coupon for your free birthday coffee:
+<p>Enter your email to receive a coupon for your free birthday drink:
 <br>
 <input type="email" name="email"></p>
 
