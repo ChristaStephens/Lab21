@@ -1,22 +1,24 @@
 @charset "ISO-8859-1";
 
-
-
-
 html {
-  background: url("https://wallpaperaccess.com/full/106892.png") no-repeat center fixed;
-  background-size: cover;
+	background:
+		url("https://img00.deviantart.net/74d6/i/2018/184/8/b/coffee_wallpaper_by_sketchy_kun-dcg5fyv.png")
+		no-repeat center fixed;
+	background-size: cover;
+	background-position: right bottom;
 }
 
 body {
 	font-family: Papyrus;
 	font-weight: bold;
-	color: LightSeaGreen;
+	color: MediumVioletRed;
 	font-size: 18px;
 	text-align: center;
+	text-align: justify;
 }
 
 h1 {
-  color: plum;
-  font-size: 32px;
+	color: plum;
+	font-size: 32px;
+	text-align: center;
 }

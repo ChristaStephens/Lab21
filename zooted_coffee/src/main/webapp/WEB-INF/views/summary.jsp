@@ -12,7 +12,7 @@
 <body>
 	<h1>Registration Summary</h1>
 	<p>
-		Form completed ${ name } ! <br><br>
+		Form completed ${ sal } ${ name } ! <br><br>
 		Your favorite drink from Zooted is ${ coffee }
 		<br> <br> Please watch your email ${email } for your
 		birthday coupon! <br>
