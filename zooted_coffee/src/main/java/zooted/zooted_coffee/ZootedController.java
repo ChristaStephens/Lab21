@@ -1,5 +1,6 @@
 package zooted.zooted_coffee;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,6 +10,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ZootedController {
+	
+	@Autowired
+	private ZootedMenu zootedMenu;
+	//always this way with Singletons
+	//creates a connection
+	
 	@RequestMapping("/")
 	public ModelAndView index() {
 		// will handle the home/index html page
@@ -48,8 +55,8 @@ public class ZootedController {
 	@RequestMapping("/menu")
 	public ModelAndView showMenu(ZootedMenu zootedmenu) {
 		ModelAndView mv = new ModelAndView ("menu");
-		mv.addObject("zootedmenu", zootedmenu);
-		
+		mv.addObject("zootedmenu", zootedMenu.getMenuItems());
+		//mv.addObject menu items.get all items talk to sophia about this
 		return mv;
 	}
 	

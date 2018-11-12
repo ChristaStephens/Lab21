@@ -5,8 +5,10 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.springframework.stereotype.Component;
 
 
+@Component
 public class ZootedMenu {
 
 	
@@ -26,8 +28,9 @@ public class ZootedMenu {
 	/**
 	 * Get list of all foods.
 	 */
-	public List<MenuItem> getAllFoods() {
+	public List<MenuItem> getMenuItems() {
 		return list;
+		//with spring componets no statics
 	}
 	
 	/**

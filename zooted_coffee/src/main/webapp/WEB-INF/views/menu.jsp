@@ -9,6 +9,7 @@
 <title>Menu</title>
 </head>
 <body>
+<div class = "container">
 <h1>Zooted Menu</h1>
 
 
@@ -20,16 +21,16 @@
 
 <table>
 <tr>
-<div class = "container">
 <th>Item</th>  <th>Category</th> <th>Description</th> <th> Price</th>
 </tr>
 
-<c:forEach var="menuitem" items="${menuitem }">
+<c:forEach var="menuitem" items="${zootedmenu }">
+<!-- items come from controller and var only exist in the table -->
 <tr>
 <td>${menuitem.name }</td>
 <td>${menuitem.category }</td>
 <td>${menuitem.description }</td>
-<td> %{menuitem.price} </td>
+<td> ${ menuitem.price } </td>
 
 </tr>
 </c:forEach>
