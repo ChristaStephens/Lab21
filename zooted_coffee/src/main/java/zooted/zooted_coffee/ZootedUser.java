@@ -2,6 +2,7 @@ package zooted.zooted_coffee;
 
 public class ZootedUser {
 	
+	protected Long id;
 	protected String name;
 	protected String last;
 	protected String bday;
@@ -11,10 +12,11 @@ public class ZootedUser {
 	protected String sal;
 	
 	public ZootedUser () {}
-	
-	
-	public ZootedUser(String name, String last, String bday, String coffee, String email, String updates, String sal) {
+
+	public ZootedUser(Long id, String name, String last, String bday, String coffee, String email, String updates,
+			String sal) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.last = last;
 		this.bday = bday;
@@ -24,7 +26,13 @@ public class ZootedUser {
 		this.sal = sal;
 	}
 
+	public Long getId() {
+		return id;
+	}
 
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getName() {
 		return name;
@@ -82,13 +90,12 @@ public class ZootedUser {
 		this.sal = sal;
 	}
 
-
 	@Override
 	public String toString() {
-		return "ZootedUser [name=" + name + ", last=" + last + ", bday=" + bday + ", coffee=" + coffee + ", email="
-				+ email + ", updates=" + updates + ", sal=" + sal + "]";
+		return "ZootedUser [id=" + id + ", name=" + name + ", last=" + last + ", bday=" + bday + ", coffee=" + coffee
+				+ ", email=" + email + ", updates=" + updates + ", sal=" + sal + "]";
 	}
 	
 	
-
+	
 }
