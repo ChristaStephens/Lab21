@@ -13,7 +13,14 @@ import org.springframework.web.servlet.ModelAndView;
 public class ZootedController {
 	
 	@Autowired
-	private ZootedMenu zootedMenu;
+	private MenuItemDao menuItemDao;
+	//use david's example of wiring daos 
+	
+	@Autowired
+	private ZootedUserDao zootedUserDao;
+	
+	
+
 	//always this way with Singletons
 	//creates a connection
 	
@@ -56,13 +63,19 @@ public class ZootedController {
 	@RequestMapping("/menu")
 	public ModelAndView showMenu() {
 		ModelAndView mv = new ModelAndView ("menu");
-		mv.addObject("zootedmenu", zootedMenu.getMenuItems());
+		mv.addObject("zootedmenu", menuItemDao.findAll());
 		//mv.addObject menu items.get all items talk to sophia about this
 		return mv;
 	}
 	
-	@Autowired
-	private JdbcTemplate jdbcTemplate;
+	@RequestMapping("/users")
+	public ModelAndView showUsers() {
+		ModelAndView mv = new ModelAndView ("users");
+		mv.addObject("zooteduser", zootedUserDao.findAllUsers());
+		
+		return mv;
+	}
 	
+
 
 }

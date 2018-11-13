@@ -8,17 +8,14 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class MenuItemDao {
+public class ZootedUserDao {
 	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
-	public List <MenuItem> findAll() {
+public List <ZootedUser> findAllUsers(){
 		
-		return jdbcTemplate.query("SELECT * FROM menu_item", new BeanPropertyRowMapper<>(MenuItem.class));
-		//wire in the dao to the controller
+		return jdbcTemplate.query("SELECT * FROM users", new BeanPropertyRowMapper<>(ZootedUser.class));
 	}
-	
-	
 
 }
