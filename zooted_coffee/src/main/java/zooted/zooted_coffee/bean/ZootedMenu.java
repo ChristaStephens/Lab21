@@ -1,4 +1,4 @@
-package zooted.zooted_coffee;
+package zooted.zooted_coffee.bean;
 
 import java.util.ArrayList;
 import java.util.List;

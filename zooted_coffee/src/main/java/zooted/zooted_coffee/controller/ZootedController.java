@@ -1,4 +1,4 @@
-package zooted.zooted_coffee;
+package zooted.zooted_coffee.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -6,6 +6,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import zooted.zooted_coffee.dao.MenuItemDao;
+import zooted.zooted_coffee.dao.ZootedUserDao;
 
 
 
@@ -71,7 +74,7 @@ public class ZootedController {
 	@RequestMapping("/users")
 	public ModelAndView showUsers() {
 		ModelAndView mv = new ModelAndView ("users");
-		mv.addObject("zooteduser", zootedUserDao.findAllUsers());
+		mv.addObject("zootedusers", zootedUserDao.findAllUsers());
 		
 		return mv;
 	}

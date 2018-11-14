@@ -1,4 +1,4 @@
-package zooted.zooted_coffee;
+package zooted.zooted_coffee.bean;
 
 public class ZootedUser {
 	

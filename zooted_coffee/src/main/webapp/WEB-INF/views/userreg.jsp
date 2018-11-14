@@ -39,9 +39,10 @@
 
 
 		<p>
-			Enter your name: <br> <input name="name" pattern="[A-Z][a-z]*" />
+			Enter your first name: <br> <input name="name" pattern="[a-zA-Z]*" />
 		</p>
 
+			Enter your last name: <br> <input name="last" pattern="[a-zA-Z]*" />
 		<p>
 			Enter your birthdate: <br> <input type="date" name="bday"
 				min="1939-12-31" max="2005-12-31" />

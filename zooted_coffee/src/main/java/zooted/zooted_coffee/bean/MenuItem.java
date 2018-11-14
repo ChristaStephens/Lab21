@@ -1,7 +1,23 @@
-package zooted.zooted_coffee;
+package zooted.zooted_coffee.bean;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+//Entity is how the controller and sql communicates
+//table is the name of the sql table to pull the info from
+@Entity
+@Table(name="menu_item")
 public class MenuItem {
 	
+	
+	//need to add this id and generated so that sql will know
+	//to pull this long id and not to auto generate another 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	protected Long id;
 	protected String name;
 	protected String category;

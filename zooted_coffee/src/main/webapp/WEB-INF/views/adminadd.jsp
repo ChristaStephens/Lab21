@@ -5,15 +5,11 @@
 <head>
 <link rel="stylesheet" href="style.css">
 <meta charset="ISO-8859-1">
-<title>All Users</title>
+<title>Admin Add</title>
 </head>
 <body>
-<h1>List of All Users</h1>
-<p>Hey</p>
+<h1>Admin Add</h1>
 
-<a href="/userreg"> User Registration</a>
-
-${ zootedusers }
-
+<a href="/admin/menu"> Admin Menu</a> <br>
 </body>
 </html>

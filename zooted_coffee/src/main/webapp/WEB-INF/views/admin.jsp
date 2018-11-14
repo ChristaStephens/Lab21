@@ -3,17 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
 <meta charset="ISO-8859-1">
-<title>All Users</title>
+<title>Admin</title>
 </head>
 <body>
-<h1>List of All Users</h1>
-<p>Hey</p>
-
-<a href="/userreg"> User Registration</a>
-
-${ zootedusers }
-
+<h1>Admin Landing</h1>
+<p> insert text</p>
 </body>
 </html>
