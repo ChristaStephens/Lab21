@@ -3,9 +3,12 @@ package zooted.zooted_coffee.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+
+import zooted.zooted_coffee.bean.ZootedMenu;
 import zooted.zooted_coffee.dao.MenuItemDao;
 
 @Controller
@@ -36,6 +39,15 @@ public class AdminController {
 	// maybe a redirect so that they can't add it twice?
 	public ModelAndView addItem() {
 		return new ModelAndView("adminadd");
+	}
+	
+	
+	@RequestMapping("/item/create")
+	public ModelAndView showCreateForm() {
+		// If there is only one model value to add, use this one-line shortcut. Equivalent to
+		// ModelAndView mav = new ModelAndView("food-form");
+		// mav.addObject("title", "Add a Food");
+		return new ModelAndView("menu-form", "title", "Add a Food");
 	}
 
 	@RequestMapping("/admin/menu/edit")

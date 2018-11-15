@@ -32,12 +32,14 @@
 <td>${menuitem.description }</td>
 <td> ${ menuitem.price } </td>
 
+
+
 </tr>
 </c:forEach>
 </table>
 </div>
 
-
+<a href="/item/create">
 <p></p>
 
 </body>
