@@ -1,27 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>	
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>	    
 <!DOCTYPE html>
 <html>
 <head>
-
-
 <link rel="stylesheet" href="/style.css" />
-
-
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Delete Form</title>
 </head>
 <body>
+
 <!-- Admin Menu Item Add -->
-<h1>Add item</h1>
+<h1>Delete An Item</h1>
 
 
 
 <div class="container">
 		<h2>Menu Items </h2>
-		<h3>Add a Item</h3>
-		<form action="/item/added" method="post">
+		<h3>Delete an Item</h3>
+		<form action="/item/removed" method="post">
 		<table class="table">
 			<tr>
 				<th scope="row">Name</th>
@@ -43,13 +40,16 @@
 				
 			</tr>
 		</table>
-		<button type="submit" class="btn btn-primary" href="/item/create">Add</button>
+		<button type="submit" class="btn btn-primary" href="/item/delete">Delete</button>
 		<a class="btn link" href="/menu">Cancel</a>
 		</form>
 	</div>
 
 
+
 <a href="/admin/menu"> Admin Menu</a>
+
+
 
 </body>
 </html>

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-
+import zooted.zooted_coffee.bean.MenuItem;
 import zooted.zooted_coffee.bean.ZootedMenu;
 import zooted.zooted_coffee.dao.MenuItemDao;
 
@@ -35,10 +35,13 @@ public class AdminController {
 		return mv;
 	}
 
-	@RequestMapping("/admin/menu/add")
+	@RequestMapping("/item/added")
 	// maybe a redirect so that they can't add it twice?
-	public ModelAndView addItem() {
-		return new ModelAndView("adminadd");
+	
+	//sending information from java bean to controller
+	public ModelAndView addItem(MenuItem menuItem) {
+		menuItemDao.create(menuItem);
+		return new ModelAndView("redirect:/admin/menu");
 	}
 	
 	
@@ -50,9 +53,17 @@ public class AdminController {
 		return new ModelAndView("menu-form", "title", "Add a Food");
 	}
 
-	@RequestMapping("/admin/menu/edit")
+	@RequestMapping("/item/removed")
 	// maybe a redirect here as well
-	public ModelAndView editItem() {
-		return new ModelAndView("adminedit");
+	public ModelAndView removeItem(MenuItem menuItem) {
+		//can use to carry the menu over with the dao, needs to be auto wired
+		menuItemDao.delete(menuItem);
+		return new ModelAndView("rederiect:/admin/menu");
+	}
+	
+	@RequestMapping("/item/delete")
+	public ModelAndView showDeleteForm() {
+		
+		return new ModelAndView ("delete-form");
 	}
 }

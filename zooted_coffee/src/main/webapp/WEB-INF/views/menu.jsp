@@ -12,6 +12,7 @@
 <div class = "container">
 <h1>Zooted Menu</h1>
 
+<!-- User Menu -->
 
 <form>
 <input name="category" placeholder="Category"/>
@@ -39,7 +40,7 @@
 </table>
 </div>
 
-<a href="/item/create">
+<a href="/item/create"> Item Create</a>
 <p></p>
 
 </body>

@@ -53,4 +53,7 @@ public class MenuItemDao {
 		em.merge(menuItem);
 	}
 
+	public void delete (MenuItem menuItem) {
+		em.remove(menuItem);
+	}
 }

@@ -43,6 +43,8 @@ public class ZootedController {
 	@RequestMapping("/summary")
 	//no php at end
 	
+	
+	//mv.addobect means to output to the page!
 	public ModelAndView showSummary( @RequestParam ("name") String name, 
 			@RequestParam("last") String last,
 			@RequestParam("coffee") String coffee,

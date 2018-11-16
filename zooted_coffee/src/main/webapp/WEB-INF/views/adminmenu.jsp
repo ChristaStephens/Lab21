@@ -12,7 +12,7 @@
 <h1>Admin Menu Landing</h1>
 
 <div class = "container">
-<table>
+<table border = "1">
 <tr>
 <th>Item</th>  <th>Category</th> <th>Description</th> <th> Price</th>
 </tr>
@@ -25,13 +25,38 @@
 <td>${menuitem.description }</td>
 <td> ${ menuitem.price } </td>
 
+
+
+<td>
+   <a href="delete?id=${menuitem.id}" onclick="areYouSure()">
+     <button value="Delete Item">Delete</button>
+   </a>
+ </td>
+ 
+ <td>
+   <a href="create?id=${menuitem.id}" onclick="areYouSure()">
+     <button value="Create Item">Create</button>
+   </a>
+ </td>
+
+<td>
+   <a href="add?id=${menuitem.id}" onclick="areYouSure()">
+     <button value="Add Cart">Cart</button>
+   </a>
+ </td>
+
+
 </tr>
+
 </c:forEach>
 </table>
 </div>
 
 
 <a href="/admin/menu"> Admin Menu</a> <br>
-<p> insert text</p>
+<a href="/item/create"> Item Create</a> <br>
+<a href="/item/delete"> Item Delete</a>
+
+
 </body>
 </html>
