@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ZootedCoffeeApplication {
 
 //	*Project Goals*
-//	1. Customer menu - add to cart buttons needed
-//	2. Admin menu add, edit delete function needed
-//	3. Admin add item to menu
-//	4. Admin delete item from menu
+//	1. Customer menu - add to cart buttons needed**********
+//	2. Admin menu add, edit delete function needed********
+//	3. Admin add item to menu****************
+//	4. Admin delete item from menu*********
 //	5. User registration
 //	 * Add to Database
 //	 * Add to Session

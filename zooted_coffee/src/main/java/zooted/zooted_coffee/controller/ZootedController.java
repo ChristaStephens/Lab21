@@ -1,12 +1,12 @@
 package zooted.zooted_coffee.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-
+import zooted.zooted_coffee.bean.ZootedUser;
 import zooted.zooted_coffee.dao.MenuItemDao;
 import zooted.zooted_coffee.dao.ZootedUserDao;
 
@@ -19,6 +19,7 @@ public class ZootedController {
 	private MenuItemDao menuItemDao;
 	//use david's example of wiring daos 
 	
+	//need to autowire the name of the variable
 	@Autowired
 	private ZootedUserDao zootedUserDao;
 	
@@ -76,9 +77,26 @@ public class ZootedController {
 	@RequestMapping("/users")
 	public ModelAndView showUsers() {
 		ModelAndView mv = new ModelAndView ("users");
-		mv.addObject("zootedusers", zootedUserDao.findAllUsers());
+		mv.addObject("zooteduser", zootedUserDao.findAllUsers());
 		
 		return mv;
+	}
+	
+	@RequestMapping("/user/create")
+	public ModelAndView showCreateForm() {
+		// If there is only one model value to add, use this one-line shortcut. Equivalent to
+		// ModelAndView mav = new ModelAndView("food-form");
+		// mav.addObject("title", "Add a Food");
+		return new ModelAndView("users", "title", "Add a Food");
+	}
+	
+	@RequestMapping("/user/added")
+	// maybe a redirect so that they can't add it twice?
+	
+	//sending information from java bean to controller
+	public ModelAndView addUsers(ZootedUser zootedUser) {
+		zootedUserDao.create(zootedUser);
+		return new ModelAndView("redirect:/users");
 	}
 	
 

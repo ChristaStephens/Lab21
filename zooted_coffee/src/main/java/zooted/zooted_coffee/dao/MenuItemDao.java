@@ -30,6 +30,11 @@ public class MenuItemDao {
 		return em.find(MenuItem.class, id);
 	}
 	
+	public void deleteById(Long id) {
+		
+		em.createQuery("DELETE FROM MenuItem WHERE id =" + id);
+	}
+	
 	
 	
 	public List<MenuItem> findByCategory(String category) {
@@ -39,7 +44,7 @@ public class MenuItemDao {
 				.setParameter("category", category)
 				.getResultList();
 	}
-	
+	//didn't carry keyword over to zooteduser dao, didn't make sense on 11/18/18
 	public List<MenuItem> findByKeyword(String keyword) {
 		return em.createQuery("FROM MenuItem WHERE LOWER(name) LIKE :regex", MenuItem.class)
 				.setParameter("regex", "%" + keyword.toLowerCase() + "%")
@@ -56,4 +61,6 @@ public class MenuItemDao {
 	public void delete (MenuItem menuItem) {
 		em.remove(menuItem);
 	}
+	
+	
 }

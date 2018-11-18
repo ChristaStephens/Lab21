@@ -53,15 +53,18 @@ public class AdminController {
 		return new ModelAndView("menu-form", "title", "Add a Food");
 	}
 
-	@RequestMapping("/item/removed")
+	@RequestMapping("admin/item/delete")
 	// maybe a redirect here as well
 	public ModelAndView removeItem(MenuItem menuItem) {
+		System.out.println(menuItem);
+		
 		//can use to carry the menu over with the dao, needs to be auto wired
-		menuItemDao.delete(menuItem);
-		return new ModelAndView("rederiect:/admin/menu");
+		menuItemDao.deleteById(menuItem.getId());
+		return new ModelAndView("redirect:/admin/menu");
+		
 	}
 	
-	@RequestMapping("/item/delete")
+	@RequestMapping("/item/removed")
 	public ModelAndView showDeleteForm() {
 		
 		return new ModelAndView ("delete-form");

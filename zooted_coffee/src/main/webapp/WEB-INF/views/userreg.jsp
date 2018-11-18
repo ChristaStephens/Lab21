@@ -67,6 +67,10 @@
 
 		<p>
 			<button>Submit</button>
+			
+			
+			<button type="submit" class="btn btn-primary" href="/item/create">Add</button>
+		<a class="btn link" href="/menu">Cancel</a>
 		</p>
 
 	</form>

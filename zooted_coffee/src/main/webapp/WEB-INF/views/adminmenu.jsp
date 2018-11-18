@@ -28,19 +28,19 @@
 
 
 <td>
-   <a href="delete?id=${menuitem.id}" onclick="areYouSure()">
+   <a href="item/delete?id=${menuitem.id}" onclick="areYouSure()">
      <button value="Delete Item">Delete</button>
    </a>
  </td>
  
  <td>
-   <a href="create?id=${menuitem.id}" onclick="areYouSure()">
+   <a href="item/create?id=${menuitem.id}" onclick="areYouSure()">
      <button value="Create Item">Create</button>
    </a>
  </td>
 
 <td>
-   <a href="add?id=${menuitem.id}" onclick="areYouSure()">
+   <a href="cart?id=${menuitem.id}" onclick="areYouSure()">
      <button value="Add Cart">Cart</button>
    </a>
  </td>
